@@ -39,7 +39,7 @@ const CONFIG = {
     '🤖️ 数码科技爱好者',
     '🧱 团队小组发动机'
   ],
-  INFO_CARD_URL: 'https://github.com/daitechlab/NotionNext', // 个人资料底部按钮链接
+  INFO_CARD_URL: 'https://github.com/breadthstudio/NotionNext', // 个人资料底部按钮链接
 
   // 用户技能图标
   HEO_GROUP_ICONS: [

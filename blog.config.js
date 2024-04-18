@@ -57,7 +57,6 @@ const BLOG = {
   FONT_URL: [
     'https://npm.elemecdn.com/lxgw-wenkai-webfont@1.6.0/style.css',
     'https://cdn.jsdelivr.net/npm/cn-fontsource-ding-talk-jin-bu-ti-regular/font.css',
-    'https://cdn.jsdelivr.net/npm/cn-fontsource-fz-shu-song-z-01-regular/font.css',
     'https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300&display=swap',
     'https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300&display=swap'
   ],
@@ -85,7 +84,6 @@ const BLOG = {
   // 衬线字体 例如'"LXGW WenKai"'
   FONT_SERIF: [
     '"LXGW WenKai"',
-    '"FZShuSong-Z01"',
     'Bitter',
     '"Noto Serif SC"',
     'SimSun',

@@ -72,7 +72,7 @@
   line-height: 1.5;
   color: var(--fg-color);
   caret-color: var(--fg-color);
-  font-family: "LXGW WenKai";
+  font-family: inherit;
 }
 
 .notion > * {
@@ -566,9 +566,7 @@ summary > .notion-h {
     border-color 100ms ease-in,
     opacity 100ms ease-in;
 }
-.dark-mode .notion-link {
-  color: rgba(209, 213, 219, 1);
-}
+
 .notion-link:hover {
   border-color: var(--fg-color-6);
   opacity: 1;

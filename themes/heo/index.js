@@ -306,7 +306,7 @@ const LayoutSlug = props => {
               className="wow fadeInUp subpixel-antialiased overflow-y-hidden"
             >
               {/* Notion文章主体 */}
-              <section className="px-5 justify-center mx-auto">
+              <section className="px-5 justify-center mx-auto font-serif">
                 <WWAds orientation="horizontal" className="w-full" />
                 {post && <NotionPage post={post} />}
                 <WWAds orientation="horizontal" className="w-full" />

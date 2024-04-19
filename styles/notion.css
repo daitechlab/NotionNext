@@ -548,6 +548,10 @@ summary > .notion-h {
   font-size: 1.2em;
 }
 
+.dark-mode .notion-quote {
+  border-color: var(--bg-color-2);
+}
+
 .notion-hr {
   width: 100%;
   margin: 6px 0;

@@ -68,7 +68,7 @@
 }
 
 .notion {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   color: var(--fg-color);
   caret-color: var(--fg-color);
@@ -562,6 +562,7 @@ summary > .notion-h {
   border-bottom: 0.05em solid !important;
   border-color: var(--fg-color-2);
   opacity: 0.7;
+  @apply dark:fill-gray-200;
   transition:
     border-color 100ms ease-in,
     opacity 100ms ease-in;

@@ -589,6 +589,7 @@ summary > .notion-h {
   height: 30px;
   margin: 1px 0;
   transition: background 120ms ease-in 0s;
+  @apply dark:fill-gray-200;
   /* pointer-events: none; */
 }
 

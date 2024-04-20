@@ -534,7 +534,7 @@ summary > .notion-h {
 }
 
 .notion-small-text {
-  font-size: 16px;
+  font-size: 1.1em;
 }
 
 .notion-quote {
@@ -816,7 +816,7 @@ code[class*='language-'] {
   width: 100%;
   box-sizing: border-box;
   text-decoration: none;
-  border: 1px solid var(--fg-color-1);
+  border: 1px solid var(--fg-color-3);
   border-radius: 3px;
   display: flex;
   overflow: hidden;

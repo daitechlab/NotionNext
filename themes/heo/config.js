@@ -15,7 +15,7 @@ const CONFIG = {
   HEO_HERO_TITLE_1: '志同者',
   HEO_HERO_TITLE_2: '不以山海为远',
   HERO_TITLE_3: 'breadth.top',
-  HEO_HERO_TITLE_4: '新版上线',
+  HEO_HERO_TITLE_4: '敬请期待',
   HEO_HERO_TITLE_5: 'Obsidian 数字花园',
   HEO_HERO_TITLE_LINK: 'https://zuji.netlify.app',
 

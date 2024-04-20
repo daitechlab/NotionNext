@@ -80,10 +80,10 @@ function Banner(props) {
     <div
       id="banners"
       onClick={handleClickBanner}
-      className="xl:flex xl:flex-col group h-full bg-white dark:bg-[#1e1e1e] rounded-xl border dark:border-gray-700 mb-3 relative overflow-hidden"
+      className="hidden xl:flex xl:flex-col group h-full bg-white dark:bg-[#1e1e1e] rounded-xl border dark:border-gray-700 mb-3 relative overflow-hidden"
     >
       <div id="banner-title" className="flex flex-col absolute top-10 left-10">
-        <div className="text-4xl font-bold mb-3  dark:text-white">
+        <div className="text-5xl font-bold mb-3  dark:text-white">
           {siteConfig('HEO_HERO_TITLE_1', null, CONFIG)}
           <br />
           {siteConfig('HEO_HERO_TITLE_2', null, CONFIG)}
@@ -91,10 +91,9 @@ function Banner(props) {
         <div className="text-xs text-gray-600  dark:text-gray-200">
           {siteConfig('HEO_HERO_TITLE_3', null, CONFIG)}
         </div>
-      </div>
-
-      {/* 斜向滚动的图标 */}
+        {/* 斜向滚动的图标 */}
       <TagsGroupBar />
+      </div>
 
       {/* 遮罩 */}
       <div
@@ -124,14 +123,14 @@ function TagsGroupBar() {
 
   return (
     <div className="tags-group-all flex -rotate-[30deg] h-full">
-      <div className="tags-group-wrapper flex flex-nowrap absolute top-16">
+      <div className="tags-group-wrapper flex flex-nowrap absolute top-20">
         {groupIcons?.map((g, index) => {
           return (
             <div key={index} className="tags-group-icon-pair ml-6 select-none">
               <div
                 style={{ background: g.color_1 }}
                 className={
-                  'tags-group-icon w-28 h-28 rounded-3xl flex items-center justify-center text-white text-lg font-bold shadow-md'
+                  'tags-group-icon w-24 h-24 rounded-3xl flex items-center justify-center text-white text-lg font-bold shadow-md'
                 }
               >
                 <LazyImage
@@ -144,7 +143,7 @@ function TagsGroupBar() {
               <div
                 style={{ background: g.color_2 }}
                 className={
-                  'tags-group-icon  mt-5 w-28 h-28 rounded-3xl flex items-center justify-center text-white text-lg font-bold shadow-md'
+                  'tags-group-icon  mt-5 w-24 h-24 rounded-3xl flex items-center justify-center text-white text-lg font-bold shadow-md'
                 }
               >
                 <LazyImage

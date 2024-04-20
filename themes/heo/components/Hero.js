@@ -80,7 +80,7 @@ function Banner(props) {
     <div
       id="banners"
       onClick={handleClickBanner}
-      className="hidden xl:flex xl:flex-col group h-full bg-white dark:bg-[#1e1e1e] rounded-xl border dark:border-gray-700 mb-3 relative overflow-hidden"
+      className="xl:flex xl:flex-col group h-full bg-white dark:bg-[#1e1e1e] rounded-xl border dark:border-gray-700 mb-3 relative overflow-hidden"
     >
       <div id="banner-title" className="flex flex-col absolute top-10 left-10">
         <div className="text-4xl font-bold mb-3  dark:text-white">
@@ -381,7 +381,7 @@ function TodayCard({ cRef, siteInfo }) {
             isCoverUp ? '' : ' pointer-events-none'
           } cursor-pointer today-card-cover absolute w-full h-full top-0`}
           style={{
-            background: `url('${siteInfo?.pageCover}') no-repeat center /cover`
+            background: `url('${HERO_RECOMMEND_COVER}') no-repeat center /cover`
           }}
         ></div>
       </div>

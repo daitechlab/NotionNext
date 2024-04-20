@@ -534,7 +534,7 @@ summary > .notion-h {
 }
 
 .notion-small-text {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .notion-quote {
@@ -1676,6 +1676,7 @@ code[class*='language-'] {
 }
 .notion-page-link {
   color: inherit;
+  @apply text-gray-900 dark:text-zinc-400;
 }
 
 svg.notion-page-icon {
@@ -1973,6 +1974,7 @@ svg + .notion-page-title-text {
   padding: 0.2em 0.9em;
   margin: 6px 0;
   font-size: 1em;
+  @apply dark:text-gray-200 dark:bg-gray-800
   /* color: var(--notion-gray); */
 }
 

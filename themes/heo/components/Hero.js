@@ -396,14 +396,9 @@ function TodayCard({ cRef, siteInfo }) {
             isCoverUp ? '' : ' pointer-events-none'
           } cursor-pointer today-card-cover absolute w-full h-full top-0`}
           style={{
-<<<<<<< HEAD
             background: `url('https://wp.technologyreview.com/wp-content/uploads/2020/08/digital-garden_web.jpg') no-repeat center /cover`
           }}
         ></div>
-=======
-            background: `url('${siteInfo?.pageCover}') no-repeat center /cover`
-          }}></div>
->>>>>>> sync
       </div>
     </div>
   )

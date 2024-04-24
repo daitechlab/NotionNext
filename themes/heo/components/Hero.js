@@ -119,27 +119,17 @@ function TagsGroupBar() {
   )
 
   return (
-<<<<<<< HEAD
     <div className="tags-group-all flex -rotate-[30deg] h-full">
       <div className="tags-group-wrapper flex flex-nowrap absolute top-20">
-=======
-    <div className='tags-group-all flex -rotate-[30deg] h-full'>
-      <div className='tags-group-wrapper flex flex-nowrap absolute top-16'>
->>>>>>> sync
         {groupIcons?.map((g, index) => {
           return (
             <div key={index} className='tags-group-icon-pair ml-6 select-none'>
               <div
                 style={{ background: g.color_1 }}
                 className={
-<<<<<<< HEAD
                   'tags-group-icon w-24 h-24 rounded-3xl flex items-center justify-center text-white text-lg font-bold shadow-md'
                 }
               >
-=======
-                  'tags-group-icon w-28 h-28 rounded-3xl flex items-center justify-center text-white text-lg font-bold shadow-md'
-                }>
->>>>>>> sync
                 <LazyImage
                   priority={true}
                   src={g.img_1}
@@ -150,14 +140,9 @@ function TagsGroupBar() {
               <div
                 style={{ background: g.color_2 }}
                 className={
-<<<<<<< HEAD
                   'tags-group-icon  mt-5 w-24 h-24 rounded-3xl flex items-center justify-center text-white text-lg font-bold shadow-md'
                 }
               >
-=======
-                  'tags-group-icon  mt-5 w-28 h-28 rounded-3xl flex items-center justify-center text-white text-lg font-bold shadow-md'
-                }>
->>>>>>> sync
                 <LazyImage
                   priority={true}
                   src={g.img_2}

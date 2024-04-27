@@ -1,4 +1,3 @@
-import Comment from '@/components/Comment'
 import replaceSearchResult from '@/components/Mark'
 import NotionPage from '@/components/NotionPage'
 import ShareBar from '@/components/ShareBar'
@@ -20,7 +19,6 @@ import BlogPostListScroll from './components/BlogPostListScroll'
 import Card from './components/Card'
 import Footer from './components/Footer'
 import Hero from './components/Hero'
-import JumpToCommentButton from './components/JumpToCommentButton'
 import PostHeader from './components/PostHeader'
 import RightFloatArea from './components/RightFloatArea'
 import SearchNav from './components/SearchNav'
@@ -74,7 +72,6 @@ const LayoutBase = props => {
           />
         </div>
       )}
-      {post && <JumpToCommentButton />}
     </>
   )
 
@@ -310,11 +307,6 @@ const LayoutSlug = props => {
             </article>
 
             <div className='pt-4 border-dashed'></div>
-
-            {/* 评论互动 */}
-            <div className='duration-200 overflow-x-auto bg-white dark:bg-hexo-black-gray px-3'>
-              <Comment frontMatter={post} />
-            </div>
           </div>
         )}
       </div>

@@ -9,22 +9,7 @@ import CONFIG from '../config'
 import dynamic from 'next/dynamic'
 import Announcement from './Announcement'
 import { useGlobal } from '@/lib/global'
-import Live2D from '@/components/Live2D'
 import { siteConfig } from '@/lib/config'
-
-const HexoRecentComments = dynamic(() => import('./HexoRecentComments'))
-const FaceBookPage = dynamic(
-  () => {
-    let facebook = <></>
-    try {
-      facebook = import('@/components/FacebookPage')
-    } catch (err) {
-      console.error(err)
-    }
-    return facebook
-  },
-  { ssr: false }
-)
 
 /**
  * Hexo主题右侧栏
@@ -71,16 +56,12 @@ export default function SideRight(props) {
 
       <Announcement post={notice}/>
 
-      {siteConfig('COMMENT_WALINE_SERVER_URL') && siteConfig('COMMENT_WALINE_RECENT') && <HexoRecentComments/>}
-
       <div className='sticky top-20'>
         {post && post.toc && post.toc.length > 1 && <Card>
           <Catalog toc={post.toc} />
         </Card>}
 
         {rightAreaSlot}
-        <FaceBookPage/>
-        <Live2D />
       </div>
 
     </div>

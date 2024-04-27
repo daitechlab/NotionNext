@@ -9,7 +9,6 @@ import SearchInput from './components/SearchInput'
 import BottomMenuBar from './components/BottomMenuBar'
 import { useGlobal } from '@/lib/global'
 import { useRouter } from 'next/router'
-import Live2D from '@/components/Live2D'
 import Announcement from './components/Announcement'
 import JumpToTopButton from './components/JumpToTopButton'
 import BlogPostListPage from './components/BlogPostListPage'
@@ -22,7 +21,6 @@ import { isBrowser } from '@/lib/utils'
 import BlogArchiveItem from './components/BlogArchiveItem'
 import BlogPostBar from './components/BlogPostBar'
 import NotionPage from '@/components/NotionPage'
-import Comment from '@/components/Comment'
 import ArticleAround from './components/ArticleAround'
 import TocDrawer from './components/TocDrawer'
 import CategoryItem from './components/CategoryItem'
@@ -113,7 +111,6 @@ const LayoutBase = props => {
                                     </div>
                                 </Tabs>
                                 <Announcement post={notice} />
-                                <Live2D />
                             </div>
                         </div>}
 
@@ -205,8 +202,6 @@ const LayoutSlug = props => {
                     </div>
                     {/* 上一篇下一篇文章 */}
                     {post?.type === 'Post' && <ArticleAround prev={prev} next={next} />}
-                    {/* 评论区 */}
-                    <Comment frontMatter={post} />
                 </section>
 
                 {/* 移动端目录 */}

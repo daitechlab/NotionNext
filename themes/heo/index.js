@@ -268,10 +268,6 @@ const LayoutSlug = props => {
     setHasCode(hasCode)
   }, [])
 
-  const commentEnable = siteConfig('COMMENT_TWIKOO_ENV_ID') || siteConfig('COMMENT_WALINE_SERVER_URL') || siteConfig('COMMENT_VALINE_APP_ID') ||
-    siteConfig('COMMENT_GISCUS_REPO') || siteConfig('COMMENT_CUSDIS_APP_ID') || siteConfig('COMMENT_UTTERRANCES_REPO') ||
-    siteConfig('COMMENT_GITALK_CLIENT_ID') || siteConfig('COMMENT_WEBMENTION_ENABLE')
-
   const router = useRouter()
   useEffect(() => {
     // 404
@@ -332,14 +328,6 @@ const LayoutSlug = props => {
                 {/* 评论区上方广告 */}
                 <div className="py-2">
                     <AdSlot />
-                </div>
-                {/* 评论互动 */}
-                <div className="duration-200 overflow-x-auto px-5">
-                  <div className="text-2xl dark:text-white">
-                    <i className="fas fa-comment mr-1" />
-                    {locale.COMMON.COMMENTS}
-                  </div>
-                  <Comment frontMatter={post} className="" />
                 </div>
               </div>}
           </div>

@@ -86,24 +86,6 @@ const GlobalHead = props => {
       <meta name='twitter:description' content={description} />
       <meta name='twitter:title' content={title} />
 
-      {siteConfig('COMMENT_WEBMENTION_ENABLE') && (
-        <>
-          <link
-            rel='webmention'
-            href={`https://webmention.io/${siteConfig('COMMENT_WEBMENTION_HOSTNAME')}/webmention`}
-          />
-          <link
-            rel='pingback'
-            href={`https://webmention.io/${siteConfig('COMMENT_WEBMENTION_HOSTNAME')}/xmlrpc`}
-          />
-        </>
-      )}
-
-      {siteConfig('COMMENT_WEBMENTION_ENABLE') &&
-        siteConfig('COMMENT_WEBMENTION_AUTH') !== '' && (
-          <link href={siteConfig('COMMENT_WEBMENTION_AUTH')} rel='me' />
-        )}
-
       {JSON.parse(siteConfig('ANALYTICS_BUSUANZI_ENABLE')) && (
         <meta name='referrer' content='no-referrer-when-downgrade' />
       )}

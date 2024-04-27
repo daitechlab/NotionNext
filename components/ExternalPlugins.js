@@ -89,17 +89,9 @@ const ExternalPlugin = props => {
     'CUSTOM_RIGHT_CLICK_CONTEXT_MENU'
   )
   const CAN_COPY = siteConfig('CAN_COPY')
-  const WEB_WHIZ_ENABLED = siteConfig('WEB_WHIZ_ENABLED')
   const AD_WWADS_BLOCK_DETECT = siteConfig('AD_WWADS_BLOCK_DETECT')
   const CHATBASE_ID = siteConfig('CHATBASE_ID')
-  const COMMENT_DAO_VOICE_ID = siteConfig('COMMENT_DAO_VOICE_ID')
   const AD_WWADS_ID = siteConfig('AD_WWADS_ID')
-  const COMMENT_TWIKOO_ENV_ID = siteConfig('COMMENT_TWIKOO_ENV_ID')
-  const COMMENT_TWIKOO_CDN_URL = siteConfig('COMMENT_TWIKOO_CDN_URL')
-  const COMMENT_ARTALK_SERVER = siteConfig('COMMENT_ARTALK_SERVER')
-  const COMMENT_ARTALK_JS = siteConfig('COMMENT_ARTALK_JS')
-  const COMMENT_TIDIO_ID = siteConfig('COMMENT_TIDIO_ID')
-  const COMMENT_GITTER_ROOM = siteConfig('COMMENT_GITTER_ROOM')
   const ANALYTICS_BAIDU_ID = siteConfig('ANALYTICS_BAIDU_ID')
   const ANALYTICS_CNZZ_ID = siteConfig('ANALYTICS_CNZZ_ID')
   const ANALYTICS_GOOGLE_ID = siteConfig('ANALYTICS_GOOGLE_ID')
@@ -245,65 +237,11 @@ const ExternalPlugin = props => {
         </>
       )}
 
-      {COMMENT_DAO_VOICE_ID && (
-        <>
-          {/* DaoVoice 反馈 */}
-          <script
-            async
-            dangerouslySetInnerHTML={{
-              __html: `
-              (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/daf1a94b.js","daovoice")
-              `
-            }}
-          />
-          <script
-            async
-            dangerouslySetInnerHTML={{
-              __html: `
-             daovoice('init', {
-                app_id: "${COMMENT_DAO_VOICE_ID}"
-              });
-              daovoice('update');
-              `
-            }}
-          />
-        </>
-      )}
-
       {AD_WWADS_ID && (
         <script
           type='text/javascript'
           src='https://cdn.wwads.cn/js/makemoney.js'
           async></script>
-      )}
-
-      {COMMENT_TWIKOO_ENV_ID && <script defer src={COMMENT_TWIKOO_CDN_URL} />}
-
-      {COMMENT_ARTALK_SERVER && <script defer src={COMMENT_ARTALK_JS} />}
-
-      {COMMENT_TIDIO_ID && (
-        <script async src={`//code.tidio.co/${COMMENT_TIDIO_ID}.js`} />
-      )}
-
-      {/* gitter聊天室 */}
-      {COMMENT_GITTER_ROOM && (
-        <>
-          <script
-            src='https://sidecar.gitter.im/dist/sidecar.v1.js'
-            async
-            defer
-          />
-          <script
-            async
-            dangerouslySetInnerHTML={{
-              __html: `
-            ((window.gitter = {}).chat = {}).options = {
-              room: '${COMMENT_GITTER_ROOM}'
-            };
-            `
-            }}
-          />
-        </>
       )}
 
       {/* 百度统计 */}

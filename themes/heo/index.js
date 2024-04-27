@@ -320,16 +320,6 @@ const LayoutSlug = props => {
                 </div>
               )}
             </article>
-
-            {fullWidth
-              ? null
-              : <div className={`${commentEnable && post ? '' : 'hidden'}`}>
-                <hr className="my-4 border-dashed" />
-                {/* 评论区上方广告 */}
-                <div className="py-2">
-                    <AdSlot />
-                </div>
-              </div>}
           </div>
         )}
       </div>

@@ -84,7 +84,6 @@ const ExternalPlugin = props => {
   const MUSIC_PLAYER = siteConfig('MUSIC_PLAYER')
   const NEST = siteConfig('NEST')
   const FLUTTERINGRIBBON = siteConfig('FLUTTERINGRIBBON')
-  const COMMENT_TWIKOO_COUNT_ENABLE = siteConfig('COMMENT_TWIKOO_COUNT_ENABLE')
   const RIBBON = siteConfig('RIBBON')
   const CUSTOM_RIGHT_CLICK_CONTEXT_MENU = siteConfig(
     'CUSTOM_RIGHT_CLICK_CONTEXT_MENU'

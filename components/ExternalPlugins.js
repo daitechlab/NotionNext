@@ -19,12 +19,6 @@ const Fireworks = dynamic(() => import('@/components/Fireworks'), {
   ssr: false
 })
 const Nest = dynamic(() => import('@/components/Nest'), { ssr: false })
-const FlutteringRibbon = dynamic(
-  () => import('@/components/FlutteringRibbon'),
-  { ssr: false }
-)
-const Ribbon = dynamic(() => import('@/components/Ribbon'), { ssr: false })
-const Sakura = dynamic(() => import('@/components/Sakura'), { ssr: false })
 const StarrySky = dynamic(() => import('@/components/StarrySky'), {
   ssr: false
 })
@@ -79,12 +73,9 @@ const ExternalPlugin = props => {
   const FACEBOOK_APP_ID = siteConfig('FACEBOOK_APP_ID')
   const FACEBOOK_PAGE_ID = siteConfig('FACEBOOK_PAGE_ID')
   const FIREWORKS = siteConfig('FIREWORKS')
-  const SAKURA = siteConfig('SAKURA')
   const STARRY_SKY = siteConfig('STARRY_SKY')
   const MUSIC_PLAYER = siteConfig('MUSIC_PLAYER')
   const NEST = siteConfig('NEST')
-  const FLUTTERINGRIBBON = siteConfig('FLUTTERINGRIBBON')
-  const RIBBON = siteConfig('RIBBON')
   const CUSTOM_RIGHT_CLICK_CONTEXT_MENU = siteConfig(
     'CUSTOM_RIGHT_CLICK_CONTEXT_MENU'
   )
@@ -163,12 +154,9 @@ const ExternalPlugin = props => {
       {ANALYTICS_BUSUANZI_ENABLE && <Busuanzi />}
       {FACEBOOK_APP_ID && FACEBOOK_PAGE_ID && <Messenger />}
       {FIREWORKS && <Fireworks />}
-      {SAKURA && <Sakura />}
       {STARRY_SKY && <StarrySky />}
       {MUSIC_PLAYER && <MusicPlayer />}
       {NEST && <Nest />}
-      {FLUTTERINGRIBBON && <FlutteringRibbon />}
-      {RIBBON && <Ribbon />}
       {DIFY_CHATBOT_ENABLED && <DifyChatbot />}
       {CUSTOM_RIGHT_CLICK_CONTEXT_MENU && <CustomContextMenu {...props} />}
       {!CAN_COPY && <DisableCopy />}

@@ -94,10 +94,6 @@ const GlobalHead = props => {
           <meta property='article:published_time' content={meta.publishDay} />
           <meta property='article:author' content={siteConfig('AUTHOR')} />
           <meta property='article:section' content={category} />
-          <meta
-            property='article:publisher'
-            content={siteConfig('FACEBOOK_PAGE')}
-          />
         </>
       )}
       {children}

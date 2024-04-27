@@ -19,9 +19,6 @@ const Fireworks = dynamic(() => import('@/components/Fireworks'), {
   ssr: false
 })
 const Nest = dynamic(() => import('@/components/Nest'), { ssr: false })
-const StarrySky = dynamic(() => import('@/components/StarrySky'), {
-  ssr: false
-})
 const DifyChatbot = dynamic(() => import('@/components/DifyChatbot'), {
   ssr: false
 })
@@ -36,9 +33,6 @@ const MusicPlayer = dynamic(() => import('@/components/Player'), { ssr: false })
 const Ackee = dynamic(() => import('@/components/Ackee'), { ssr: false })
 const Gtag = dynamic(() => import('@/components/Gtag'), { ssr: false })
 const Busuanzi = dynamic(() => import('@/components/Busuanzi'), { ssr: false })
-const Messenger = dynamic(() => import('@/components/FacebookMessenger'), {
-  ssr: false
-})
 const VConsole = dynamic(() => import('@/components/VConsole'), { ssr: false })
 const CustomContextMenu = dynamic(
   () => import('@/components/CustomContextMenu'),
@@ -70,8 +64,6 @@ const ExternalPlugin = props => {
   const ANALYTICS_VERCEL = siteConfig('ANALYTICS_VERCEL')
   const ANALYTICS_BUSUANZI_ENABLE = siteConfig('ANALYTICS_BUSUANZI_ENABLE')
   const ADSENSE_GOOGLE_ID = siteConfig('ADSENSE_GOOGLE_ID')
-  const FACEBOOK_APP_ID = siteConfig('FACEBOOK_APP_ID')
-  const FACEBOOK_PAGE_ID = siteConfig('FACEBOOK_PAGE_ID')
   const FIREWORKS = siteConfig('FIREWORKS')
   const STARRY_SKY = siteConfig('STARRY_SKY')
   const MUSIC_PLAYER = siteConfig('MUSIC_PLAYER')
@@ -152,9 +144,7 @@ const ExternalPlugin = props => {
       {ANALYTICS_GOOGLE_ID && <Gtag />}
       {ANALYTICS_VERCEL && <Analytics />}
       {ANALYTICS_BUSUANZI_ENABLE && <Busuanzi />}
-      {FACEBOOK_APP_ID && FACEBOOK_PAGE_ID && <Messenger />}
       {FIREWORKS && <Fireworks />}
-      {STARRY_SKY && <StarrySky />}
       {MUSIC_PLAYER && <MusicPlayer />}
       {NEST && <Nest />}
       {DIFY_CHATBOT_ENABLED && <DifyChatbot />}

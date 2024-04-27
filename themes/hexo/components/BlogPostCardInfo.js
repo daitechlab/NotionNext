@@ -1,7 +1,6 @@
 import NotionPage from '@/components/NotionPage'
 import Link from 'next/link'
 import TagItemMini from './TagItemMini'
-import TwikooCommentCount from '@/components/TwikooCommentCount'
 import { siteConfig } from '@/lib/config'
 import { formatDateFmt } from '@/lib/utils/formatDate'
 import { checkContainHttp, sliceUrlFromHttp } from '@/lib/utils'
@@ -44,8 +43,6 @@ export const BlogPostCardInfo = ({ post, showPreview, showPageCover, showSummary
                         {post.category}
 
                     </Link>
-
-                    <TwikooCommentCount className='text-sm hover:text-indigo-700 dark:hover:text-indigo-400' post={post}/>
                 </div>}
             </header>
 

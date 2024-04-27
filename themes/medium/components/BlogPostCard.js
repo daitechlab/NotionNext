@@ -5,7 +5,6 @@ import Link from 'next/link'
 import CONFIG from '../config'
 import CategoryItem from './CategoryItem'
 import TagItemMini from './TagItemMini'
-import TwikooCommentCount from '@/components/TwikooCommentCount'
 import LazyImage from '@/components/LazyImage'
 import { checkContainHttp, sliceUrlFromHttp } from '@/lib/utils'
 import NotionIcon from '@/components/NotionIcon'
@@ -48,7 +47,6 @@ const BlogPostCard = ({ post, showSummary }) => {
                     <div className="text-sm py-1">{post.date?.start_date}</div>
                     {siteConfig('MEDIUM_POST_LIST_CATEGORY', null, CONFIG) && <CategoryItem category={post.category} />}
                     {siteConfig('MEDIUM_POST_LIST_TAG', null, CONFIG) && post?.tagItems?.map(tag => <TagItemMini key={tag.name} tag={tag} />)}
-                    <TwikooCommentCount post={post} className='hover:underline'/>
                 </div>
 
                 <div className="flex"></div>

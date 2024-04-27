@@ -3,17 +3,12 @@ import dynamic from 'next/dynamic'
 import { GlobalStyle } from './GlobalStyle'
 import LA51 from './LA51'
 import TianLiGPT from './TianliGPT'
-import WebWhiz from './Webwhiz'
 
 import { CUSTOM_EXTERNAL_CSS, CUSTOM_EXTERNAL_JS } from '@/blog.config'
 import { isBrowser, loadExternalResource } from '@/lib/utils'
 import { useEffect } from 'react'
 import { initGoogleAdsense } from './GoogleAdsense'
 
-const TwikooCommentCounter = dynamic(
-  () => import('@/components/TwikooCommentCounter'),
-  { ssr: false }
-)
 const DebugPanel = dynamic(() => import('@/components/DebugPanel'), {
   ssr: false
 })
@@ -182,12 +177,10 @@ const ExternalPlugin = props => {
       {MUSIC_PLAYER && <MusicPlayer />}
       {NEST && <Nest />}
       {FLUTTERINGRIBBON && <FlutteringRibbon />}
-      {COMMENT_TWIKOO_COUNT_ENABLE && <TwikooCommentCounter {...props} />}
       {RIBBON && <Ribbon />}
       {DIFY_CHATBOT_ENABLED && <DifyChatbot />}
       {CUSTOM_RIGHT_CLICK_CONTEXT_MENU && <CustomContextMenu {...props} />}
       {!CAN_COPY && <DisableCopy />}
-      {WEB_WHIZ_ENABLED && <WebWhiz />}
       {AD_WWADS_BLOCK_DETECT && <AdBlockDetect />}
       {TIANLI_KEY && <TianLiGPT />}
       <VConsole />

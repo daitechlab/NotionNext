@@ -3,7 +3,6 @@ import TagGroups from './TagGroups'
 import Catalog from './Catalog'
 import { InfoCard } from './InfoCard'
 import dynamic from 'next/dynamic'
-import Live2D from '@/components/Live2D'
 import { AnalyticsCard } from './AnalyticsCard'
 import TouchMeCard from './TouchMeCard'
 import LatestPostsGroupMini from './LatestPostsGroupMini'
@@ -46,18 +45,12 @@ export default function SideRight(props) {
                     </Card>
                 )}
 
-                {/* 联系交流群 */}
-                <TouchMeCard />
-
                 {/* 最新文章列表 */}
                 <div className={'border dark:border-gray-700 dark:bg-[#1e1e1e] dark:text-white rounded-xl lg:p-6 p-4 hidden lg:block bg-white'}>
                     <LatestPostsGroupMini {...props} />
                 </div>
 
                 {rightAreaSlot}
-
-                <FaceBookPage />
-                <Live2D />
 
                 {/* 标签和成绩 */}
                 <Card className={'bg-white dark:bg-[#1e1e1e] dark:text-white'}>

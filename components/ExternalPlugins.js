@@ -65,7 +65,6 @@ const ExternalPlugin = props => {
   const ANALYTICS_BUSUANZI_ENABLE = siteConfig('ANALYTICS_BUSUANZI_ENABLE')
   const ADSENSE_GOOGLE_ID = siteConfig('ADSENSE_GOOGLE_ID')
   const FIREWORKS = siteConfig('FIREWORKS')
-  const STARRY_SKY = siteConfig('STARRY_SKY')
   const MUSIC_PLAYER = siteConfig('MUSIC_PLAYER')
   const NEST = siteConfig('NEST')
   const CUSTOM_RIGHT_CLICK_CONTEXT_MENU = siteConfig(

@@ -85,6 +85,7 @@ const GlobalHead = props => {
       <meta name='twitter:card' content='summary_large_image' />
       <meta name='twitter:description' content={description} />
       <meta name='twitter:title' content={title} />
+      <link rel='icon' href={`${siteConfig('BLOG_FAVICON')}`} />
 
       {JSON.parse(siteConfig('ANALYTICS_BUSUANZI_ENABLE')) && (
         <meta name='referrer' content='no-referrer-when-downgrade' />

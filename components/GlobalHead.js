@@ -45,22 +45,6 @@ const GlobalHead = props => {
 
   const BLOG_FAVICON = siteConfig('BLOG_FAVICON', null, NOTION_CONFIG)
 
-  const COMMENT_WEBMENTION_ENABLE = siteConfig(
-    'COMMENT_WEBMENTION_ENABLE',
-    null,
-    NOTION_CONFIG
-  )
-
-  const COMMENT_WEBMENTION_HOSTNAME = siteConfig(
-    'COMMENT_WEBMENTION_HOSTNAME',
-    null,
-    NOTION_CONFIG
-  )
-  const COMMENT_WEBMENTION_AUTH = siteConfig(
-    'COMMENT_WEBMENTION_AUTH',
-    null,
-    NOTION_CONFIG
-  )
   const ANALYTICS_BUSUANZI_ENABLE = siteConfig(
     'ANALYTICS_BUSUANZI_ENABLE',
     null,

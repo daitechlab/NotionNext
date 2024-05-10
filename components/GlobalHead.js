@@ -51,7 +51,6 @@ const GlobalHead = props => {
     NOTION_CONFIG
   )
 
-  const FACEBOOK_PAGE = siteConfig('FACEBOOK_PAGE', null, NOTION_CONFIG)
   // SEO关键词
   let keywords = meta?.tags || siteConfig('KEYWORDS')
   if (post?.tags && post?.tags?.length > 0) {

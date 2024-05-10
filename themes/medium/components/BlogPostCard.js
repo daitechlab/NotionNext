@@ -1,7 +1,6 @@
 import LazyImage from '@/components/LazyImage'
 import NotionIcon from '@/components/NotionIcon'
 import NotionPage from '@/components/NotionPage'
-import TwikooCommentCount from '@/components/TwikooCommentCount'
 import { siteConfig } from '@/lib/config'
 import { useGlobal } from '@/lib/global'
 import Link from 'next/link'
@@ -57,7 +56,6 @@ const BlogPostCard = ({ post, showSummary }) => {
             post?.tagItems?.map(tag => (
               <TagItemMini key={tag.name} tag={tag} />
             ))}
-          <TwikooCommentCount post={post} className='hover:underline' />
         </div>
 
         <div className='flex'></div>

@@ -18,9 +18,6 @@ const ThemeSwitch = dynamic(() => import('@/components/ThemeSwitch'), {
 const Fireworks = dynamic(() => import('@/components/Fireworks'), {
   ssr: false
 })
-const MouseFollow = dynamic(() => import('@/components/MouseFollow'), {
-  ssr: false
-})
 const Nest = dynamic(() => import('@/components/Nest'), { ssr: false })
 const DifyChatbot = dynamic(() => import('@/components/DifyChatbot'), {
   ssr: false

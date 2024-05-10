@@ -18,6 +18,9 @@ const ThemeSwitch = dynamic(() => import('@/components/ThemeSwitch'), {
 const Fireworks = dynamic(() => import('@/components/Fireworks'), {
   ssr: false
 })
+const MouseFollow = dynamic(() => import('@/components/MouseFollow'), {
+  ssr: false
+})
 const Nest = dynamic(() => import('@/components/Nest'), { ssr: false })
 const DifyChatbot = dynamic(() => import('@/components/DifyChatbot'), {
   ssr: false
@@ -87,6 +90,7 @@ const ExternalPlugin = props => {
   const CLARITY_ID = siteConfig('CLARITY_ID')
   const IMG_SHADOW = siteConfig('IMG_SHADOW')
   const ANIMATE_CSS_URL = siteConfig('ANIMATE_CSS_URL')
+  const MOUSE_FOLLOW = siteConfig('MOUSE_FOLLOW')
 
   // 自定义样式css和js引入
   if (isBrowser) {
@@ -120,12 +124,16 @@ const ExternalPlugin = props => {
   }
 
   useEffect(() => {
+    // 异步渲染谷歌广告
     if (ADSENSE_GOOGLE_ID) {
       setTimeout(() => {
-        // 异步渲染谷歌广告
         initGoogleAdsense()
       }, 1000)
     }
+
+    // 执行注入脚本
+    // eslint-disable-next-line no-eval
+    eval(GLOBAL_JS)
   }, [])
 
   if (DISABLE_PLUGIN) {
@@ -136,7 +144,7 @@ const ExternalPlugin = props => {
     <>
       {/* 全局样式嵌入 */}
       <GlobalStyle />
-
+      {MOUSE_FOLLOW && <MouseFollow />}
       {THEME_SWITCH && <ThemeSwitch />}
       {DEBUG && <DebugPanel />}
       {ANALYTICS_ACKEE_TRACKER && <Ackee />}
@@ -165,16 +173,6 @@ const ExternalPlugin = props => {
                     `
             }} /> */}
         </>
-      )}
-
-      {/* 注入JS脚本 */}
-      {GLOBAL_JS && (
-        <script
-          async
-          dangerouslySetInnerHTML={{
-            __html: GLOBAL_JS
-          }}
-        />
       )}
 
       {CHATBASE_ID && (

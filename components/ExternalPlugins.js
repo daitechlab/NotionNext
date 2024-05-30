@@ -11,48 +11,6 @@ import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import { initGoogleAdsense } from './GoogleAdsense'
 
-const DebugPanel = dynamic(() => import('@/components/DebugPanel'), {
-  ssr: false
-})
-const ThemeSwitch = dynamic(() => import('@/components/ThemeSwitch'), {
-  ssr: false
-})
-const Fireworks = dynamic(() => import('@/components/Fireworks'), {
-  ssr: false
-})
-const Nest = dynamic(() => import('@/components/Nest'), { ssr: false })
-const DifyChatbot = dynamic(() => import('@/components/DifyChatbot'), {
-  ssr: false
-})
-const Analytics = dynamic(
-  () =>
-    import('@vercel/analytics/react').then(async m => {
-      return m.Analytics
-    }),
-  { ssr: false }
-)
-const MusicPlayer = dynamic(() => import('@/components/Player'), { ssr: false })
-const Ackee = dynamic(() => import('@/components/Ackee'), { ssr: false })
-const Gtag = dynamic(() => import('@/components/Gtag'), { ssr: false })
-const Busuanzi = dynamic(() => import('@/components/Busuanzi'), { ssr: false })
-const VConsole = dynamic(() => import('@/components/VConsole'), { ssr: false })
-const CustomContextMenu = dynamic(
-  () => import('@/components/CustomContextMenu'),
-  { ssr: false }
-)
-const DisableCopy = dynamic(() => import('@/components/DisableCopy'), {
-  ssr: false
-})
-const AdBlockDetect = dynamic(() => import('@/components/AdBlockDetect'), {
-  ssr: false
-})
-const LoadingProgress = dynamic(() => import('@/components/LoadingProgress'), {
-  ssr: false
-})
-const AosAnimation = dynamic(() => import('@/components/AOSAnimation'), {
-  ssr: false
-})
-
 /**
  * 各种插件脚本
  * @param {*} props

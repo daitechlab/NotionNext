@@ -6,7 +6,6 @@
  *  2. 更多说明参考此[文档](https://docs.tangly1024.com/article/notionnext-heo)
  */
 
-import Comment from '@/components/Comment'
 import { AdSlot } from '@/components/GoogleAdsense'
 import { HashTag } from '@/components/HeroIcons'
 import LazyImage from '@/components/LazyImage'
@@ -252,16 +251,6 @@ const LayoutSlug = props => {
     setHasCode(hasCode)
   }, [])
 
-  const commentEnable =
-    siteConfig('COMMENT_TWIKOO_ENV_ID') ||
-    siteConfig('COMMENT_WALINE_SERVER_URL') ||
-    siteConfig('COMMENT_VALINE_APP_ID') ||
-    siteConfig('COMMENT_GISCUS_REPO') ||
-    siteConfig('COMMENT_CUSDIS_APP_ID') ||
-    siteConfig('COMMENT_UTTERRANCES_REPO') ||
-    siteConfig('COMMENT_GITALK_CLIENT_ID') ||
-    siteConfig('COMMENT_WEBMENTION_ENABLE')
-
   const router = useRouter()
   useEffect(() => {
     // 404
@@ -317,25 +306,6 @@ const LayoutSlug = props => {
 
             {/* 上一篇\下一篇文章 */}
             <PostAdjacent {...props} />
-
-            {/* 评论区 */}
-            {fullWidth ? null : (
-              <div className={`${commentEnable && post ? '' : 'hidden'}`}>
-                <hr className='my-4 border-dashed' />
-                {/* 评论区上方广告 */}
-                <div className='py-2'>
-                  <AdSlot />
-                </div>
-                {/* 评论互动 */}
-                <div className='duration-200 overflow-x-auto px-5'>
-                  <div className='text-2xl dark:text-white'>
-                    <i className='fas fa-comment mr-1' />
-                    {locale.COMMON.COMMENTS}
-                  </div>
-                  <Comment frontMatter={post} className='' />
-                </div>
-              </div>
-            )}
           </div>
         )}
       </div>

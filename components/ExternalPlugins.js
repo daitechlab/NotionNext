@@ -4,7 +4,6 @@ import { GlobalStyle } from './GlobalStyle'
 import LA51 from './LA51'
 import TianLiGPT from './TianliGPT'
 
-import { CUSTOM_EXTERNAL_CSS, CUSTOM_EXTERNAL_JS } from '@/blog.config'
 import { convertInnerUrl } from '@/lib/notion/convertInnerUrl'
 import { isBrowser, loadExternalResource } from '@/lib/utils'
 import { useRouter } from 'next/router'

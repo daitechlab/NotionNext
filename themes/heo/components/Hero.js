@@ -397,16 +397,8 @@ function TodayCard({ cRef, siteInfo }) {
           id='today-card-cover'
           className={`${
             isCoverUp ? '' : ' pointer-events-none'
-<<<<<<< HEAD
-          } cursor-pointer today-card-cover absolute w-full h-full top-0`}
-          style={{
-            background: `url('https://img2.imgtp.com/2024/04/27/BUzieDlv.jpeg') no-repeat center /cover`
-          }}
-        ></div>
-=======
           } hover:scale-110 duration-1000 object-cover cursor-pointer today-card-cover absolute w-full h-full top-0`}
         />
->>>>>>> sync
       </div>
     </div>
   )
